@@ -135,7 +135,7 @@ int main(void)
                 char * string = strtok(string4, ",");
                 char * letter = strtok(NULL,",");
                 char * character = strtok(NULL, ",");
-                printf("\nYour new string is:, the lenght of array is: ");
+                printf("\nYour new string is: ");
 
                 for (int i = 0; i < strlen(string4); i++)
                 {   
@@ -162,6 +162,33 @@ int main(void)
                     break;
                 }
             }
+        }
+        else if (answer == 5)
+        {
+            while (true)
+            {
+                scanf("%c", &temp);
+                char command[50];
+                system("clear");
+                printf("Type a command: ");
+                scanf("%[^\n]", command);
+
+                system(command);
+
+                printf("\n\n");
+                printf("[0] to go back to main menu or [1] if you want to try other command...\
+                \n\nR/:");
+                scanf("%i", &question);
+                if (question == 1)
+                {
+                    continue;
+                }
+                else if (question == 0)
+                {
+                    break;
+                }
+            }
+
         }
         else if (answer == 6)
         {
